@@ -1,0 +1,317 @@
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --blue-blc : #113983ec;
+    --blue-drk : #081e47ec;
+    --shadow : 0 5px 10px 5px rgba(0, 0, 0, 0.3);
+    --navColor : linear-gradient(to right, rgba(54, 164, 228, 0.6)5%, rgba(13, 24, 71, 0.9));
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 300;
+    background-color: antiquewhite;
+}
+
+nav{
+    position: absolute;
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+}
+
+.logo{
+    color: var(--white);
+    font-size:  30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: 0.2 ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+span{
+    color: var(--blue-blc)
+}
+
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+.btnLogin-popup{
+  background: transparent;
+  outline: none;
+  border: 0px;
+}
+
+nav ul li a, nav ul li i{
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+}
+
+
+nav ul li a.active, nav ul li a:hover, nav ul li i.active, nav ul li i:hover{
+    background: var(--blue-drk);
+    transition: 0.5s;
+}
+
+.checkbtn{
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+.checkbtn i{
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5 ease;
+}
+
+.checkbtn i:hover{
+    background: var(--blue-blc);
+}
+
+#check{
+    display: none;
+}
+
+.btnlogin-popup{
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/*Forms*/
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 440px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba(8, 141, 230, 0.322);
+    backdrop-filter: blur(25px);
+    color: #272727;
+    box-shadow: 0 0 30px rgba(12, 98, 104, 0.5);
+    border-radius: 12px;
+    padding: 30px 40px;
+  }
+
+  .wrapper h1{
+    font-size: 30px;
+    text-align: center;
+    color: var(--blue-drk);
+    text-shadow: 0 0 20px var(--blue-blc);
+  }
+  .wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+    margin: 30px 0;
+  }
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(3, 2, 46, 0.432);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #272727;
+    padding: 20px 45px 20px 20px;
+  }
+  .input-box input::placeholder{
+    color: #646464;
+  }
+  .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  
+  }
+  .wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+  }
+  .remember-forgot label input{
+    accent-color: #272727;
+    margin-right: 3px;
+  
+  }
+  .remember-forgot a{
+    color: #272727;
+    text-decoration: none;
+  
+  }
+  .remember-forgot a:hover{
+    text-decoration: underline;
+  }
+  .wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #b9ddff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(90, 57, 57, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #030424b7;
+    font-weight: 600;
+  }
+  .wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  
+  }
+  .register-link p a{
+    color: #272727;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .register-link p a:hover{
+    text-decoration: underline;
+  }
+
+  .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--blue-drk);
+    font-size: 2em;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  /*Tema*/
+  .text{
+    position: relative;
+    height: 55vh;
+    width: 50%;
+    bottom: 10%;
+    transform: translate(10%, 50%);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba(8, 141, 230, 0.322);
+    backdrop-filter: blur(50px);
+    color: #272727;
+    box-shadow: 0 0 30px rgba(12, 98, 104, 0.5);
+    border-radius: 25px;
+    padding: 30px 100px;
+  }
+  .project-download{
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 35px;
+    border-radius: 10px;
+    border: 2px  solid ;
+    transition: .3s;
+  }
+
+
+
+
+
+
+
+
+
+
+/*---Media queries---*/
+/* Small devices (Phone) */
+@media (max-width: 758px) {
+    .checkbtn{
+        display: block;
+    }
+     ul{
+        position: fixed; 
+        width: 100%;
+        height: 100vh;
+        background: var(--blue-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    nav ul li a.active, nav ul li a:hover, nav ul li i.active, nav ul li i:hover{
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .wrapper{
+      top: 50%;
+      left: 50%
+    }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 952px) and (min-width:759px) {
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+}
